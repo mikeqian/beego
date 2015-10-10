@@ -33,7 +33,7 @@ import (
 var globalRouterTemplate = `package routers
 
 import (
-	"github.com/astaxie/beego"
+	"github.com/mikeqian/beego"
 )
 
 func init() {

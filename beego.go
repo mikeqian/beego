@@ -63,38 +63,6 @@ func Router(rootpath string, c ControllerInterface, mappingMethods ...string) *A
 	return BeeApp
 }
 
-// Router add list from
-// usage:
-// beego.Include(&BankAccount{}, &OrderController{},&RefundController{},&ReceiptController{})
-// type BankAccount struct{
-//   beego.Controller
-// }
-//
-// register the function
-// func (b *BankAccount)Mapping(){
-//  b.Mapping("ShowAccount" , b.ShowAccount)
-//  b.Mapping("ModifyAccount", b.ModifyAccount)
-//}
-//
-// //@router /account/:id  [get]
-// func (b *BankAccount) ShowAccount(){
-//    //logic
-// }
-//
-//
-// //@router /account/:id  [post]
-// func (b *BankAccount) ModifyAccount(){
-//    //logic
-// }
-//
-// the comments @router url methodlist
-// url support all the function Router's pattern
-// methodlist [get post head put delete options *]
-func Include(cList ...ControllerInterface) *App {
-	BeeApp.Handlers.Include(cList...)
-	return BeeApp
-}
-
 // RESTRouter adds a restful controller handler to BeeApp.
 // its' controller implements beego.ControllerInterface and
 // defines a param "pattern/:objectId" to visit each resource.

@@ -26,5 +26,5 @@ import (
 
 func main() {
 	beego.RESTRouter("/object", &controllers.ObjectController{})
-	beego.Run()
+	beego.Run(":8089")
 }
