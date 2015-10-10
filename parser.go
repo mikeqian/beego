@@ -27,7 +27,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/astaxie/beego/utils"
+	"github.com/mikeqian/beego/utils"
 )
 
 var globalRouterTemplate = `package routers

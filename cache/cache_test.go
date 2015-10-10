@@ -25,55 +25,55 @@ func TestCache(t *testing.T) {
 	if err != nil {
 		t.Error("init err")
 	}
-	if err = bm.Put("astaxie", 1, 10); err != nil {
+	if err = bm.Put("mikeqian", 1, 10); err != nil {
 		t.Error("set Error", err)
 	}
-	if !bm.IsExist("astaxie") {
+	if !bm.IsExist("mikeqian") {
 		t.Error("check err")
 	}
 
-	if v := bm.Get("astaxie"); v.(int) != 1 {
+	if v := bm.Get("mikeqian"); v.(int) != 1 {
 		t.Error("get err")
 	}
 
 	time.Sleep(30 * time.Second)
 
-	if bm.IsExist("astaxie") {
+	if bm.IsExist("mikeqian") {
 		t.Error("check err")
 	}
 
-	if err = bm.Put("astaxie", 1, 10); err != nil {
+	if err = bm.Put("mikeqian", 1, 10); err != nil {
 		t.Error("set Error", err)
 	}
 
-	if err = bm.Incr("astaxie"); err != nil {
+	if err = bm.Incr("mikeqian"); err != nil {
 		t.Error("Incr Error", err)
 	}
 
-	if v := bm.Get("astaxie"); v.(int) != 2 {
+	if v := bm.Get("mikeqian"); v.(int) != 2 {
 		t.Error("get err")
 	}
 
-	if err = bm.Decr("astaxie"); err != nil {
+	if err = bm.Decr("mikeqian"); err != nil {
 		t.Error("Decr Error", err)
 	}
 
-	if v := bm.Get("astaxie"); v.(int) != 1 {
+	if v := bm.Get("mikeqian"); v.(int) != 1 {
 		t.Error("get err")
 	}
-	bm.Delete("astaxie")
-	if bm.IsExist("astaxie") {
+	bm.Delete("mikeqian")
+	if bm.IsExist("mikeqian") {
 		t.Error("delete err")
 	}
 
 	//test GetMulti
-	if err = bm.Put("astaxie", "author", 10); err != nil {
+	if err = bm.Put("mikeqian", "author", 10); err != nil {
 		t.Error("set Error", err)
 	}
-	if !bm.IsExist("astaxie") {
+	if !bm.IsExist("mikeqian") {
 		t.Error("check err")
 	}
-	if v := bm.Get("astaxie"); v.(string) != "author" {
+	if v := bm.Get("mikeqian"); v.(string) != "author" {
 		t.Error("get err")
 	}
 
@@ -84,7 +84,7 @@ func TestCache(t *testing.T) {
 		t.Error("check err")
 	}
 
-	vv := bm.GetMulti([]string{"astaxie", "astaxie1"})
+	vv := bm.GetMulti([]string{"mikeqian", "astaxie1"})
 	if len(vv) != 2 {
 		t.Error("GetMulti ERROR")
 	}
@@ -101,45 +101,45 @@ func TestFileCache(t *testing.T) {
 	if err != nil {
 		t.Error("init err")
 	}
-	if err = bm.Put("astaxie", 1, 10); err != nil {
+	if err = bm.Put("mikeqian", 1, 10); err != nil {
 		t.Error("set Error", err)
 	}
-	if !bm.IsExist("astaxie") {
+	if !bm.IsExist("mikeqian") {
 		t.Error("check err")
 	}
 
-	if v := bm.Get("astaxie"); v.(int) != 1 {
+	if v := bm.Get("mikeqian"); v.(int) != 1 {
 		t.Error("get err")
 	}
 
-	if err = bm.Incr("astaxie"); err != nil {
+	if err = bm.Incr("mikeqian"); err != nil {
 		t.Error("Incr Error", err)
 	}
 
-	if v := bm.Get("astaxie"); v.(int) != 2 {
+	if v := bm.Get("mikeqian"); v.(int) != 2 {
 		t.Error("get err")
 	}
 
-	if err = bm.Decr("astaxie"); err != nil {
+	if err = bm.Decr("mikeqian"); err != nil {
 		t.Error("Decr Error", err)
 	}
 
-	if v := bm.Get("astaxie"); v.(int) != 1 {
+	if v := bm.Get("mikeqian"); v.(int) != 1 {
 		t.Error("get err")
 	}
-	bm.Delete("astaxie")
-	if bm.IsExist("astaxie") {
+	bm.Delete("mikeqian")
+	if bm.IsExist("mikeqian") {
 		t.Error("delete err")
 	}
 
 	//test string
-	if err = bm.Put("astaxie", "author", 10); err != nil {
+	if err = bm.Put("mikeqian", "author", 10); err != nil {
 		t.Error("set Error", err)
 	}
-	if !bm.IsExist("astaxie") {
+	if !bm.IsExist("mikeqian") {
 		t.Error("check err")
 	}
-	if v := bm.Get("astaxie"); v.(string) != "author" {
+	if v := bm.Get("mikeqian"); v.(string) != "author" {
 		t.Error("get err")
 	}
 
@@ -151,7 +151,7 @@ func TestFileCache(t *testing.T) {
 		t.Error("check err")
 	}
 
-	vv := bm.GetMulti([]string{"astaxie", "astaxie1"})
+	vv := bm.GetMulti([]string{"mikeqian", "astaxie1"})
 	if len(vv) != 2 {
 		t.Error("GetMulti ERROR")
 	}

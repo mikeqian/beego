@@ -22,8 +22,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/astaxie/beego/grace"
-	"github.com/astaxie/beego/utils"
+	"github.com/mikeqian/beego/grace"
+	"github.com/mikeqian/beego/utils"
 )
 
 // App defines beego application with a new PatternServeMux.

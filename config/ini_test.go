@@ -78,10 +78,10 @@ func TestIni(t *testing.T) {
 		t.Error(v)
 		t.Fatal(err)
 	}
-	if err = iniconf.Set("name", "astaxie"); err != nil {
+	if err = iniconf.Set("name", "mikeqian"); err != nil {
 		t.Fatal(err)
 	}
-	if iniconf.String("name") != "astaxie" {
+	if iniconf.String("name") != "mikeqian" {
 		t.Fatal("get name error")
 	}
 	if iniconf.String("demo::key1") != "asta" {

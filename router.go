@@ -29,9 +29,9 @@ import (
 	"strings"
 	"time"
 
-	beecontext "github.com/astaxie/beego/context"
-	"github.com/astaxie/beego/toolbox"
-	"github.com/astaxie/beego/utils"
+	beecontext "github.com/mikeqian/beego/context"
+	"github.com/mikeqian/beego/toolbox"
+	"github.com/mikeqian/beego/utils"
 )
 
 const (

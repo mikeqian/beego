@@ -23,9 +23,9 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/astaxie/beego/grace"
-	"github.com/astaxie/beego/toolbox"
-	"github.com/astaxie/beego/utils"
+	"github.com/mikeqian/beego/grace"
+	"github.com/mikeqian/beego/toolbox"
+	"github.com/mikeqian/beego/utils"
 )
 
 // BeeAdminApp is the default adminApp used by admin module.
@@ -41,7 +41,7 @@ var beeAdminApp *adminApp
 //	 	if t.Nanoseconds() < 100 {
 //			return false
 //	 	}
-//	 	if strings.HasPrefix(requestPath, "/astaxie") {
+//	 	if strings.HasPrefix(requestPath, "/mikeqian") {
 //			return false
 //	 	}
 //	 	return true

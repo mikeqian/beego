@@ -18,7 +18,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/astaxie/beego/config"
+	"github.com/mikeqian/beego/config"
 )
 
 //xml parse should incluce in <config></config> tags
@@ -76,10 +76,10 @@ func TestXML(t *testing.T) {
 		t.Error(v)
 		t.Fatal(err)
 	}
-	if err = xmlconf.Set("name", "astaxie"); err != nil {
+	if err = xmlconf.Set("name", "mikeqian"); err != nil {
 		t.Fatal(err)
 	}
-	if xmlconf.String("name") != "astaxie" {
+	if xmlconf.String("name") != "mikeqian" {
 		t.Fatal("get name error")
 	}
 }
